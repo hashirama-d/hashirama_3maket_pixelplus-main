@@ -1,0 +1,40 @@
+.menu {
+  background-color: $menu-bg;
+  &__btn{
+    display: none;
+  }
+  &__list{
+    padding: 15px 0 15px 25px;
+  }
+  &__item {
+    position: relative;
+    display: inline-block;
+    padding: 0 20px;
+    &::after {
+      position: absolute;
+      content: "|";
+      top: 25%;
+      right: -5px;
+      font-size: 30px;
+      color: #fff;
+    }
+    &:last-child::after {
+        display: none;
+      }
+    &-link {
+      @include font_size-lh-fw(30px, 50px, 400);
+      @media (max-width: $content-width){
+        @include font_size-lh-fw(25px, 40px, 400);
+      }
+      @media (max-width: 846px){
+        @include font_size-lh-fw(19px, 35px, 400);
+      }
+      color: #ffffff;
+      &:hover{
+        text-decoration: underline;
+        text-underline-position: from-font;
+        text-underline-offset: 2px;
+      }
+    }
+  }
+}
