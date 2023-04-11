@@ -1,0 +1,15 @@
+body {
+  height: 100%;
+  font-family: $main-font;
+  color: $text-color;
+  @include font_size-lh-fw(14px, 22px, 400);
+  @media (max-width: $tablet-max-width) {
+    @include font_size-lh-fw(12px, 16px);
+  }
+  @media (max-width: $phone-max-width) {
+    @include font_size-lh-fw(9px, 11px);
+  }
+}
+
+
+

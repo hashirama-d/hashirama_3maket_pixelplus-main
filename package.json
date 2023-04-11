@@ -1,0 +1,37 @@
+{
+  "name": "hashirama_3maket",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-watch": "^5.0.1",
+    "sass": "^1.61.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hashirama-d/hashirama_3maket_pixelplus-main.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hashirama-d/hashirama_3maket_pixelplus-main/issues"
+  },
+  "homepage": "https://github.com/hashirama-d/hashirama_3maket_pixelplus-main#readme",
+  "browserslist": [
+    "last 2 versions",
+    "safari 5",
+    "ie 7",
+    "ie 8",
+    "ie 9",
+    "opera 12.1",
+    "ios 6",
+    "android 4"
+  ]
+}
