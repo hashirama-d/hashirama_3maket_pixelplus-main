@@ -1,14 +1,59 @@
 .menu {
   background-color: $menu-bg;
-  &__btn{
+  &__burger {
     display: none;
+    @media (max-width: $tablet-max-width) {
+      display: inline-block;
+      line-height: 40px;
+      margin: 10px 0 10px 45px;
+    }
   }
-  &__list{
+  &__btn {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #ffffff;
+    border-top: 2px solid #ffffff;
+    position: relative;
+    &::before{
+      position: absolute;
+      content: "";
+      width: 30px;
+      height: 2px;
+      background-color: #ffffff;
+      left: 0;
+      top: 10px;
+    }
+  }
+  &__title {
+    vertical-align: top;
+    padding-left: 10px;
+    @include font_size-lh-fw(25px, 40px, 400);
+    color: #ffffff;
+  }
+  &__list {
     padding: 15px 0 15px 25px;
+    transition: all .6s;
+    @media (max-width: $tablet-max-width) {
+      display: none;
+      &.menu__list_enabled{
+        display: block;
+      }
+      background-color: $menu-bg;
+      width: 250px;
+    }
   }
   &__item {
     position: relative;
     display: inline-block;
+    @media (max-width: $tablet-max-width) {
+      display: block;
+    }
     padding: 0 20px;
     &::after {
       position: absolute;
@@ -17,6 +62,9 @@
       right: -5px;
       font-size: 30px;
       color: #fff;
+      @media (max-width: $tablet-max-width){
+        display: none;
+      }
     }
     &:last-child::after {
         display: none;
