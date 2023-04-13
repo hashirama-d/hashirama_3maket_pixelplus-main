@@ -34,11 +34,10 @@
   }
   &__left {
     display: flex;
-    justify-content: flex-end;
-    flex-direction: row;
+    align-items: flex-end;
   }
   &__title {
-    padding-bottom: 15px;
+    padding-bottom: 10px;
     max-width: 100px;
     @include font_size-lh-fw(28px, 25px, 700);
     @media (max-width: $tablet-max-width) {
@@ -50,7 +49,7 @@
   &__right {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-end;
     flex-direction: column;
     padding-bottom: 4px;
     @media (max-width: $tablet-max-width) {
@@ -58,12 +57,9 @@
     }
   }
   &__slogan {
-    padding-bottom: 7px;
+    padding-bottom: 12px;
     @media (max-width: $tablet-max-width) {
-      padding-bottom: 6px;
-    }
-    @media (max-width: $phone-max-width) {
-      padding-bottom: 3px;
+      padding-bottom: 9px;
     }
   }
   &__contact-phone {

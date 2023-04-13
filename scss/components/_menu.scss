@@ -1,11 +1,13 @@
 .menu {
   background-color: $menu-bg;
+  text-align: center;
   &__burger {
     display: none;
     @media (max-width: $tablet-max-width) {
       display: inline-block;
+
       line-height: 40px;
-      margin: 10px 0 10px 45px;
+      margin: 10px 0 10px;
     }
   }
   &__btn {
@@ -37,15 +39,15 @@
     color: #ffffff;
   }
   &__list {
-    padding: 15px 0 15px 25px;
+    padding: 15px 0 15px;
     transition: all .6s;
     @media (max-width: $tablet-max-width) {
       display: none;
-      &.menu__list_enabled{
+      &.menu__list_enabled {
         display: block;
       }
       background-color: $menu-bg;
-      width: 250px;
+
     }
   }
   &__item {

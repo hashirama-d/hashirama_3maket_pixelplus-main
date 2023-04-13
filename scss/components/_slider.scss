@@ -1,0 +1,121 @@
+/* Слайдер */
+.slick-slider{}
+
+/* Слайдер запущений */
+.slick-slider.slick-initialized{}
+
+/* Слайдер з крапками */
+.slick-slider.slick-dotted{}
+
+/* Обмежуюча оболонка */
+.slick-list {
+  overflow: hidden;
+}
+
+/* Стрічка слайдів */
+.slick-track{
+  display: flex;
+}
+
+/* Слайд */
+.slick-slide{}
+
+/* Слайд активний (показується) */
+.slick-slide.slick-active{}
+
+/* Слайд основний */
+.slick-slide.slick-current{}
+
+/* Слайд по центру */
+.slick-slide.slick-center{}
+
+/* Клонований слайд */
+.slick-slide.slick-cloned{}
+
+/* Стрілка */
+.slick-arrow{}
+
+/* Стрілка вліво */
+.slick-arrow.slick-prev{}
+
+/* Стрілка вправо */
+.slick-arrow.slick-next{}
+
+/* Стрілка не активна */
+.slick-arrow.slick-disabled{}
+
+/* Крапки (bullets) */
+.slick-dots{}
+.slick-dots li{}
+
+/* Активна крапка */
+.slick-dots li.slick-active{}
+
+/* Елемент крапки */
+.slick-dots li button{}
+
+.slider {
+  max-width: 1400px;
+  margin: 0 auto;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.slider__inner {
+  position: relative;
+
+  .slider__item {
+    text-align: center;
+  }
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    // значення з-індексу для контенту з ввімкненим налаштуванням fade - 1000. кнопки мають бути над контентом
+    z-index: 1010;
+    font-size: 0;
+    height: 60px;
+    width: 34px;
+    outline: none;
+    border: none;
+    @media (max-width: $phone-max-width) {
+      height: 40px;
+      width: 23px;
+    }
+    &.slick-prev {
+      left: 210px;
+      @media (max-width: $content-width) {
+        left: 110px;
+      }
+      @media (max-width: $tablet-max-width) {
+        left: 80px;
+      }
+      @media (max-width: $phone-max-width) {
+        left: 50px;
+      }
+      background-image: url("../images/slider-prev-btn.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-color: $text-color;
+    }
+    &.slick-next {
+      right: 210px;
+      @media (max-width: $content-width) {
+        right: 110px;
+      }
+      @media (max-width: $tablet-max-width) {
+        right: 80px;
+      }
+      @media (max-width: $phone-max-width) {
+        right: 50px;
+      }
+      background-image: url("../images/slider-next-btn.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: $text-color;
+    }
+  }
+}
