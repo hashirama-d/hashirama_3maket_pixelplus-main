@@ -288,9 +288,6 @@ body {
   text-underline-offset: 2px;
 }
 
-/* Слайдер */
-/* Слайдер запущений */
-/* Слайдер з крапками */
 /* Обмежуюча оболонка */
 .slick-list {
   overflow: hidden;
@@ -303,34 +300,22 @@ body {
   display: flex;
 }
 
-/* Слайд */
-/* Слайд активний (показується) */
-/* Слайд основний */
-/* Слайд по центру */
-/* Клонований слайд */
-/* Стрілка */
-/* Стрілка вліво */
-/* Стрілка вправо */
-/* Стрілка не активна */
-/* Крапки (bullets) */
-/* Активна крапка */
-/* Елемент крапки */
 .slider {
   max-width: 1400px;
   margin: 0 auto;
+}
+.slider__inner {
+  position: relative;
+}
+.slider__item {
+  text-align: center;
 }
 .slider img {
   max-width: 100%;
   max-height: 100%;
 }
 
-.slider__inner {
-  position: relative;
-}
-.slider__inner .slider__item {
-  text-align: center;
-}
-.slider__inner .slick-arrow {
+.slick-arrow {
   position: absolute;
   top: 50%;
   margin-top: -30px;
@@ -342,12 +327,12 @@ body {
   border: none;
 }
 @media (max-width: 440px) {
-  .slider__inner .slick-arrow {
+  .slick-arrow {
     height: 40px;
     width: 23px;
   }
 }
-.slider__inner .slick-arrow.slick-prev {
+.slick-arrow.slick-prev {
   left: 210px;
   background-image: url("../images/slider-prev-btn.svg");
   background-repeat: no-repeat;
@@ -355,21 +340,21 @@ body {
   background-color: #767676;
 }
 @media (max-width: 1000px) {
-  .slider__inner .slick-arrow.slick-prev {
+  .slick-arrow.slick-prev {
     left: 110px;
   }
 }
 @media (max-width: 720px) {
-  .slider__inner .slick-arrow.slick-prev {
+  .slick-arrow.slick-prev {
     left: 80px;
   }
 }
 @media (max-width: 440px) {
-  .slider__inner .slick-arrow.slick-prev {
+  .slick-arrow.slick-prev {
     left: 50px;
   }
 }
-.slider__inner .slick-arrow.slick-next {
+.slick-arrow.slick-next {
   right: 210px;
   background-image: url("../images/slider-next-btn.svg");
   background-repeat: no-repeat;
@@ -377,17 +362,17 @@ body {
   background-color: #767676;
 }
 @media (max-width: 1000px) {
-  .slider__inner .slick-arrow.slick-next {
+  .slick-arrow.slick-next {
     right: 110px;
   }
 }
 @media (max-width: 720px) {
-  .slider__inner .slick-arrow.slick-next {
+  .slick-arrow.slick-next {
     right: 80px;
   }
 }
 @media (max-width: 440px) {
-  .slider__inner .slick-arrow.slick-next {
+  .slick-arrow.slick-next {
     right: 50px;
   }
 }
