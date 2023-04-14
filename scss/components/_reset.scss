@@ -1,7 +1,7 @@
 *, *::after, *::before {
   box-sizing: border-box;
 }
-body {
+body, p {
   margin: 0;
   padding: 0;
 }
@@ -12,6 +12,7 @@ a {
 nav, ul{
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 li {
   text-decoration: none;

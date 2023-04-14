@@ -4,7 +4,7 @@
           box-sizing: border-box;
 }
 
-body {
+body, p {
   margin: 0;
   padding: 0;
 }
@@ -17,6 +17,7 @@ a {
 nav, ul {
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 
 li {
@@ -389,5 +390,193 @@ body {
   .slider__inner .slick-arrow.slick-next {
     right: 50px;
   }
+}
+
+.catalog__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.catalog__breadcrumbs {
+  margin-bottom: 20px;
+}
+.catalog__breadcrumbs-list {
+  padding: 5px 0;
+}
+.catalog__breadcrumbs-list a {
+  text-decoration: underline;
+}
+.catalog__breadcrumbs-list li {
+  display: inline-block;
+  position: relative;
+}
+.catalog__breadcrumbs-list li + li {
+  padding-left: 15px;
+}
+.catalog__breadcrumbs-list li + li::before {
+  content: "/";
+  position: absolute;
+  left: 2px;
+}
+.catalog__breadcrumbs-list li:last-child a {
+  text-decoration: none;
+}
+
+.catalog__categories {
+  width: 200px;
+  margin-bottom: 100px;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.catalog__category {
+  margin-bottom: 20px;
+}
+.catalog__category a:hover {
+  text-decoration: underline;
+}
+.catalog__category_active a {
+  text-decoration: underline;
+}
+
+.catalog__subcategories {
+  margin-top: 5px;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  margin-left: 20px;
+  list-style: disc;
+}
+.catalog__subcategories a {
+  text-decoration: none;
+}
+
+.catalog__subcategory_active a {
+  text-decoration: underline;
+  color: #000000;
+}
+
+.catalog__price-list-link {
+  width: 200px;
+  display: block;
+  text-align: center;
+}
+.catalog__price-list-link img {
+  display: block;
+  margin: 0 auto;
+  width: 95px;
+  height: 95px;
+}
+.catalog__price-list-link span {
+  font-size: 30px;
+  line-height: 25px;
+  font-weight: 700;
+}
+.catalog__price-list-link:hover {
+  text-decoration: underline;
+}
+
+.catalog__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 780px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 15px;
+     -moz-column-gap: 15px;
+          column-gap: 15px;
+  row-gap: 20px;
+  margin-bottom: 30px;
+}
+
+.catalog__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 250px;
+  min-height: 380px;
+  padding: 20px;
+  background-color: #dcdcdc;
+}
+.catalog__item-image {
+  width: 210px;
+  height: 210px;
+}
+.catalog__item-description {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  padding-bottom: 30px;
+}
+.catalog__item-summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.catalog__item-cart {
+  padding-right: 16px;
+}
+.catalog__item-price {
+  font-size: 28px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.catalog__pager {
+  margin-bottom: 65px;
+}
+.catalog__pager-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+}
+.catalog__pager-item {
+  display: inline-block;
+}
+.catalog__pager-item_active {
+  color: #444444;
+  font-size: 20px;
+}
+.catalog__pager-item:hover {
+  text-decoration: underline;
+}
+
+.catalog__about-us {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 40px;
+     -moz-column-gap: 40px;
+          column-gap: 40px;
+  margin: 30px 0 205px;
+}
+.catalog__about-us-column {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  max-width: 370px;
 }
 /*# sourceMappingURL=style.css.map */
