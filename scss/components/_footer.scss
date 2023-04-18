@@ -1,0 +1,35 @@
+.footer {
+  background-color: $menu-bg;
+  color: #ffffff;
+  margin-top: auto;
+  padding: 50px 0 40px;
+  //height: 300px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $phone-max-width) {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+  }
+  &__menu {
+    &-item {
+      &-link {
+        border-bottom: 2px solid #bbbbbb;
+        &:hover {
+          border-color: #ffffff;
+        }
+      }
+      margin-bottom: 10px;
+    }
+  }
+  &__developers {
+    display: flex;
+    img {
+      width: 45px;
+      height: 45px;
+      margin-right: 10px;
+    }
+  }
+}

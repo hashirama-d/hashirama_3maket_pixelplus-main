@@ -1,6 +1,9 @@
 *, *::after, *::before {
   box-sizing: border-box;
 }
+html {
+  height: 100%;
+}
 body, p {
   margin: 0;
   padding: 0;
