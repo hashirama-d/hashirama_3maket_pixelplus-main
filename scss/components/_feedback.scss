@@ -1,0 +1,79 @@
+.jquery-modal {
+  z-index: 1020;
+}
+
+.modal {
+  border-radius: 0;
+  box-shadow: none;
+  max-width: 470px;
+  padding: 35px 65px 25px;
+  @media (max-width: $phone-max-width) {
+    padding: 35px 30px 25px;
+  }
+  a.close-modal {
+    border-radius: 0;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABBUlEQVR4nO3ZTQqDMBCGYU/RSq9Yj1uwPc1bRBcirWicv4T5Vm6UeVCTGdJ1mUwm00yAJ9AHqKOfaim9eWDO6IlhRkw1TBlKHnADXssDPsBDpdL9Gu6rGt7FNXhikEJ4YpBGeGDQQlhi0EZYYMwQmhhzhAbGDSGJcUdIYMIgrmDCIUowYRFnMOERRzDVIPYw1SH+zBDj5tp9ULvyZup6E+tsPiezEUA0TXxa/PixI4zNp7K3OlWD4cASGx7DiX0iLIaCzS4chgs7dhgMAm2HOwbB3skNg0IDaI5BsYs1w2DQiqONsZwn0MJ4DEVIYzwnO6QwEcZTJDDNHL01cxiayWQyXcR8AfkY5euVO0c7AAAAAElFTkSuQmCC");
+    background-color: $menu-bg;
+    width: 27px;
+    height: 27px;
+    top: -27px;
+    right: -27px;
+  }
+
+  text-align: center;
+  .form-title {
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    @include font_size-lh-fw(24px, 18px, 700);
+    @media (max-width: $phone-max-width) {
+      @include font_size-lh-fw(20px, 14px, 700);
+    }
+  }
+  .form-label {
+    line-height: 18px;
+  }
+  .form-input {
+    margin-bottom: 20px;
+    padding: 0 10px;
+    width: 100%;
+    height: 40px;
+    color: $text-color;
+    font-family: $main-font;
+    &::placeholder {
+      color: #dc7f7f;
+      font-style: italic;
+      opacity: 0;
+    }
+    @include font_size-lh-fw(14px, 22px, 400);
+    &#message {
+      word-break: break-word;
+      height: 140px;
+      resize: none;
+    }
+    &:focus {
+      border: 2px solid $text-color;
+      outline: none; // mozilla має цю властивість за замовчуванням при фокусі, її треба вікдлючити
+      &::placeholder {
+        opacity: 1;
+      }
+    }
+    &:invalid:focus {
+      box-shadow: inset 0 0 10px #ff8383;
+      border: 2px solid #ff8383;
+    }
+  }
+  #form-submit-btn {
+    border: none;
+    outline: none;
+    font-family: $main-font;
+    text-transform: uppercase;
+    background-color: $menu-bg;
+    color: #ffffff;
+    @include font_size-lh-fw(18px, 14px, 700);
+    padding: 15px;
+    cursor: pointer;
+    &:hover {
+      background-color: #929292;
+    }
+  }
+}
