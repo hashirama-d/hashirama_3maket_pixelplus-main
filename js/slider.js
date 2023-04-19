@@ -13,5 +13,5 @@ $(document).ready(function(){
 $(window).on('load resize', function() {
     var screenWidth = $(window).width();
     var containerWidth = Math.min(screenWidth, 1400); // Limit to 1400px
-    $('.slider').css('max-width', containerWidth + 'px');
+    $('.slider__inner').css('max-width', containerWidth + 'px');
 });

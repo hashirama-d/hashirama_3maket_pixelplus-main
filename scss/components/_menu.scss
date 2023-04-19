@@ -1,13 +1,32 @@
 .menu {
   background-color: $menu-bg;
-  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 230px;
+  z-index: 1015;
+  @media (max-width: $tablet-max-width) {
+    top: 176px;
+  }
+  @media (max-width: $phone-max-width) {
+    top: 0;
+    position: relative;
+  }
+  &__inner {
+    text-align: center;
+    //@media (max-width: $tablet-max-width) {
+    //  height: 40px;
+    //}
+    //@media (max-width: $phone-max-width) {
+    //  height: 30px;
+    //}
+  }
   &__burger {
     display: none;
     @media (max-width: $tablet-max-width) {
       display: inline-block;
 
       line-height: 40px;
-      margin: 10px 0 10px;
+      margin: 5px 0;
     }
   }
   &__btn {
@@ -22,7 +41,7 @@
     border-bottom: 2px solid #ffffff;
     border-top: 2px solid #ffffff;
     position: relative;
-    &::before{
+    &::before, &::after{
       position: absolute;
       content: "";
       width: 30px;
@@ -30,6 +49,16 @@
       background-color: #ffffff;
       left: 0;
       top: 10px;
+      transition: all .5s;
+    }
+    &_enabled {
+      border-color: transparent;
+      &::before{
+        transform: rotate(-45deg);
+      }
+      &::after {
+        transform: rotate(45deg);
+      }
     }
   }
   &__title {
@@ -39,12 +68,14 @@
     color: #ffffff;
   }
   &__list {
-    padding: 15px 0 15px;
+    z-index: 1030;
+    padding: 15px 0;
     transition: all .6s;
     @media (max-width: $tablet-max-width) {
       display: none;
       &.menu__list_enabled {
         display: block;
+        padding: 5px 0 10px;
       }
       background-color: $menu-bg;
 
@@ -74,10 +105,9 @@
     &-link {
       @include font_size-lh-fw(30px, 50px, 400);
       @media (max-width: $content-width){
-        @include font_size-lh-fw(25px, 40px, 400);
+        @include font_size-lh-fw(19px, 35px, 400);
       }
       @media (max-width: 846px){
-        @include font_size-lh-fw(19px, 35px, 400);
       }
       color: #ffffff;
       &:hover{
