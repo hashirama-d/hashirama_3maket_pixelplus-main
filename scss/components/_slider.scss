@@ -1,17 +1,15 @@
-/* Обмежуюча оболонка */
+// Обмежуюча оболонка
 .slick-list {
   overflow: hidden;
 }
-
-/* Стрічка слайдів */
+// Стрічка слайдів
 .slick-track{
   display: flex;
-
 }
 
 .slider {
   width: 100%;
-  background-color: #f8f8f8;
+  background-color: $slider-bg;
   display: flex;
   justify-content: center;
   &__inner {

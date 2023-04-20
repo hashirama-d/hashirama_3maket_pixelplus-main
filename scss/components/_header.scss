@@ -1,6 +1,6 @@
-// Загальні налаштування силю хедеру
 .header {
   background-color: $bg-color;
+
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -15,10 +15,12 @@
       align-items: center;
     }
   }
+
   &__logo {
     margin-right: 10px;
     max-width: 100px;
     max-height: 100px;
+
     &-link {
       img {
         width: 100px;
@@ -30,10 +32,12 @@
       }
     }
   }
+
   &__left {
     display: flex;
     align-items: flex-end;
   }
+
   &__title {
     padding-bottom: 10px;
     max-width: 100px;
@@ -44,6 +48,7 @@
       @include font_size-lh-fw(24px, 20px, 700);
     }
   }
+
   &__right {
     display: flex;
     justify-content: space-between;
@@ -54,12 +59,14 @@
       padding-bottom: 2px;
     }
   }
+
   &__slogan {
     padding-bottom: 12px;
     @media (max-width: $tablet-max-width) {
       padding-bottom: 9px;
     }
   }
+
   &__contact-phone {
     font-family: $secondary-font;
     @include font_size-lh-fw(40px, 46px);
@@ -69,6 +76,7 @@
     @media (max-width: $phone-max-width) {
     }
   }
+
   &__feedback-link {
     @include font_size-lh-fw(24px, 32px, 700);
     border-bottom: 2px dashed;
