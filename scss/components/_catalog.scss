@@ -48,13 +48,13 @@
 
   &__category {
     margin-bottom: 20px;
-    &:hover {
+    &_active {
+      & a {
+        text-decoration: underline;
+      }
       .catalog__subcategories {
         display: block;
       }
-    }
-    & a:hover {
-      text-decoration: underline;
     }
   }
 
