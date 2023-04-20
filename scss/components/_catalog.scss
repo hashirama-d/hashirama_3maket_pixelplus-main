@@ -48,17 +48,18 @@
 
   &__category {
     margin-bottom: 20px;
+    &:hover {
+      .catalog__subcategories {
+        display: block;
+      }
+    }
     & a:hover {
       text-decoration: underline;
-    }
-    &_active {
-      a {
-        text-decoration: underline;
-      }
     }
   }
 
   &__subcategories {
+    display: none;
     margin-top: 5px;
     @include font_size-lh-fw(14px, 22px, 400);
     margin-left: 20px;
@@ -69,11 +70,9 @@
   }
 
   &__subcategory {
-    &_active {
-      a {
-        text-decoration: underline;
-        color: #000000;
-      }
+    a:hover {
+      text-decoration: underline;
+      color: #000000;
     }
   }
 

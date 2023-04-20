@@ -1,6 +1,6 @@
 const menuBtn = document.querySelector(".menu__btn");
 const menuList = document.querySelector(".menu__list")
-
+const modalLink = document.querySelector(".header__feedback-link");
 //  Тригер кнопки для бургер-меню
 menuBtn.addEventListener("click", () => {
     menuList.classList.toggle("menu__list_enabled");
@@ -26,3 +26,11 @@ $(window).on('load resize', function() {
     var containerWidth = Math.min(screenWidth, 1400); // Limit to 1400px
     $('.slider__inner').css('max-width', containerWidth + 'px');
 });
+
+modalLink.addEventListener("click", () => {
+    // Налаштування вікна зворотнього зв'язку
+    $("#feedback").modal({
+        fadeDuration: 500
+    });
+});
+

@@ -486,13 +486,14 @@ body {
 .catalog__category {
   margin-bottom: 20px;
 }
+.catalog__category:hover .catalog__subcategories {
+  display: block;
+}
 .catalog__category a:hover {
   text-decoration: underline;
 }
-.catalog__category_active a {
-  text-decoration: underline;
-}
 .catalog__subcategories {
+  display: none;
   margin-top: 5px;
   font-size: 14px;
   line-height: 22px;
@@ -503,7 +504,7 @@ body {
 .catalog__subcategories a {
   text-decoration: none;
 }
-.catalog__subcategory_active a {
+.catalog__subcategory a:hover {
   text-decoration: underline;
   color: #000000;
 }
